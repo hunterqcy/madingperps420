@@ -6,7 +6,7 @@
     "futures": {
         "tradingCoin": "ETH",
         "maxDropPercentage": 5,
-        "totalAmount": 200,
+        "totalAmount": 100,
         "orderCount": 6,
         "incrementPercentage": 50,
         "takeProfitPercentage": 0.2,

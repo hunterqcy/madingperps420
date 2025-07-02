@@ -2,8 +2,8 @@
 
 ## 1. 系统概述
 
-合约马丁交易策略系统是一个自动化的加密货币合约交易系统，采用改良版马丁格尔策略执行交易。系统基于Node.js开发，支持Backpack交易所的合约交易，具有自动开仓、止盈止损、风险控制等功能。
-
+合约马丁交易策略系统是一个自动化的加密货币合约交易系统，采用改良版马丁格尔策略执行交易。系统基于Node.js开发，支持Backpack交易所的合约交易，具有自动开仓、止盈止损、风险控制等功能。主要引用的库：
+https://github.com/cryptocj520/madingperps420
 ### 核心特点
 
 - **马丁格尔策略**：价格下跌时分批增仓，摊低持仓成本
@@ -180,6 +180,15 @@ node start_futures_trading.js
 - 错误日志保存在`logs/error_yyyy-mm-dd.log`
 - 使用Ctrl+C可安全停止程序
 
+### 4.6 回测数据和回测系统运行
+
+修改getBinanceHisData文件中的日期和交易对，运行以下命令获取对应的数据并生成json文件
+node src/getBinanceHisData.js
+
+基于回测数据运行回测系统，运行以下命令(默认不传第二个文件名参数，自动运行ethusdt_1m.json文件中的数据)
+
+node src/backtest/backtestRunner.js (ethusdt_1m.json)
+
 ## 5. 配置参数说明
 
 ### 5.1 API配置
@@ -336,4 +345,4 @@ tail -f logs/trading_yyyy-mm-dd.log
 
 ---
 
-*最后更新：2025年4月16日* 
+*最后更新：2025年4月16日*
