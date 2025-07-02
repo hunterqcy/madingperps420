@@ -183,11 +183,14 @@ node start_futures_trading.js
 ### 4.6 回测数据和回测系统运行
 
 修改getBinanceHisData文件中的日期和交易对，运行以下命令获取对应的数据并生成json文件
+```bash
 node src/getBinanceHisData.js
+```
 
 基于回测数据运行回测系统，运行以下命令(默认不传第二个文件名参数，自动运行ethusdt_1m.json文件中的数据)
-
+```bash
 node src/backtest/backtestRunner.js (ethusdt_1m.json)
+```
 
 ## 5. 配置参数说明
 
